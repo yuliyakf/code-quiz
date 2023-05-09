@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,69 +8,72 @@
     <link rel="stylesheet" href="/styles.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div class = containerMain> 
+    <div class=containerMain>
         <br>
-        <p class = "time">Time: <span id="timer"></span></p>
-        <div class="containerStart">     
-        <h1>Coding Quiz Challenge</h1>
-        <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will subtracts your time by ten seconds!</p>
-        <button class="btnStart"> Start Quiz</button>
-</div>
-<div class="containerOne">
-    <h2 id="questionOne">question 1</h2>
-    <button class="btn" class="incorrect">Answer 1</button>
-    <button class="btn" class="correct">Answer 1</button>
-    <button class="btn" class="incorrect">Answer 1</button>
-    <button class="btn" class="incorrect">Answer 1</button>
-</div>
-<div class="containerTwo">
-    <h2 id="questionTwo">question 2</h2>
-    <button class="btn" class="correct">Answer 1</button>
-    <button class="btn" class="incorrect">Answer 1</button>
-    <button class="btn" class="incorrect">Answer 1</button>
-    <button class="btn" class="incorrect">Answer 1</button>
-</div>
-<div class="containerThree" style="display:none;">
-    <h2 id="questionThree">question 3</h2>
-    <button class="btn" class="incorrect">Answer 1</button>
-    <button class="btn" class="incorrect">Answer 1</button>
-    <button class="btn" class="incorrect">Answer 1</button>
-    <button class="btn" class="correct">Answer 1</button>
-</div>
-<div class="containerFour" style="display:none;">
-    <h2 id="questionFour">question 4</h2>
-    <button class="btn" class="incorrect">Answer 1</button>
-    <button class="btn" class="incorrect">Answer 1</button>
-    <button class="btn" class="correct">Answer 1</button>
-    <button class="btn" class="incorrect">Answer 1</button>
-</div>
-<div class="containerFive" style="display:none;">
-    <h2 id="questionFive">question 5</h2>
-    <button class="btn" class="incorrect">Answer 1</button>
-    <button class="btn" class="correct">Answer 1</button>
-    <button class="btn" class="incorrect">Answer 1</button>
-    <button class="btn" class="incorrect">Answer 1</button>
-</div>
-<div class="containerScore" style="display:none;">
-    <h2>All done!</h2>
-    <form>
-        <label for="initials">Enter initials</label>
-        <input type="text" id="init" name = "initials">
-        <input type="submit" value="Submit">
-    </form><br>
-</div>
-<div class="containerLast" style="display:none;">
-    <h2> High Scores</h2>
-    <form>
-        <output name="x" for="initials" id ="output">Hi</output>
-    </form>
-    <br>
-    <button class="btn1" id="goBack">Go back</button>
-    <button class="btn1" id="clearScore">Clear High Score</button>
-</div>
+        <p class="time">Time: <span id="timer"></span></p>
+        <div class="containerStart">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+                answers will subtracts your time by ten seconds!</p>
+            <button class="btnStart"> Start Quiz</button>
+        </div>
+        <div class="containerOne">
+            <h2 id="questionOne">question 1</h2>
+            <button class="btn incorrect">Answer 1</button>
+            <button class="btn correct" id="btnCorrect1" onclick="setTimeout(questionTwo, 2000);">Answer 1</button>
+            <button class="btn incorrect">Answer 1</button>
+            <button class="btn incorrect">Answer 1</button>
+        </div>
+        <div class="containerTwo">
+            <h2 id="questionTwo">question 2</h2>
+            <button class="btn correct" id="btnCorrect2" onclick="setTimeout(questionThree, 2000)" ;>Answer 1</button>
+            <button class="btn incorrect">Answer 1</button>
+            <button class="btn incorrect">Answer 1</button>
+            <button class="btn incorrect">Answer 1</button>
+        </div>
+        <div class="containerThree" style="display:none;">
+            <h2 id="questionThree">question 3</h2>
+            <button class="btn incorrect">Answer 1</button>
+            <button class="btn incorrect">Answer 1</button>
+            <button class="btn incorrect">Answer 1</button>
+            <button class="btn correct" id="btnCorrect3" onclick="setTimeout(questionFour, 2000)" ;>Answer 1</button>
+        </div>
+        <div class="containerFour" style="display:none;">
+            <h2 id="questionFour">question 4</h2>
+            <button class="btn incorrect">Answer 1</button>
+            <button class="btn incorrect">Answer 1</button>
+            <button class="btn correct" id="btnCorrect4" onclick="setTimeout(questionFive, 2000)" ;>Answer 1</button>
+            <button class="btn incorrect">Answer 1</button>
+        </div>
+        <div class="containerFive" style="display:none;">
+            <h2 id="questionFive">question 5</h2>
+            <button class="btn incorrect">Answer 1</button>
+            <button class="btn correct" id="btnCorrect5" onclick="setTimeout(scoreResults, 2000)" ;>Answer 1</button>
+            <button class="btn incorrect">Answer 1</button>
+            <button class="btn incorrect">Answer 1</button>
+        </div>
+        <div class="containerScore" style="display:none;">
+            <h2>All done!</h2>
+            <form>
+                <label for="initials">Enter initials</label>
+                <input type="text" id="init" name="initials">
+                <input type="submit" value="Submit">
+            </form><br>
+        </div>
+        <div class="containerLast" style="display:none;">
+            <h2> High Scores</h2>
+            <form>
+                <output name="x" for="initials" id="output">Hi</output>
+            </form>
+            <br>
+            <button class="btn1" id="goBack">Go back</button>
+            <button class="btn1" id="clearScore">Clear High Score</button>
+        </div>
 
     </div>
     <script src="/main.js"></script>
 </body>
+
 </html>
