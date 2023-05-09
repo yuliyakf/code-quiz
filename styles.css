@@ -1,0 +1,42 @@
+/*
+body{
+    display: none;
+}
+*/
+.containerMain{
+    width: 80%;
+    margin:0 auto;
+    text-align: center;
+}
+.time{
+    float: right;
+}
+.btn{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 250px;
+    height: 50px;
+}
+.btnStart{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 150px;
+    height: 30px;
+}
+#output {
+    border: 1px black solid;
+    padding: 5px 30px;
+}
+.btn1{
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+}
+.containerOne {
+    display: none;
+}
+.containerTwo{
+    display: none;  
+}
