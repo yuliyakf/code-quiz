@@ -12,7 +12,12 @@ let correctBtn =document.querySelector("#btnCorrect1")
 let incorrect = document.querySelectorAll(".incorrect")
 
 let answerBtn = document.querySelectorAll(".btn")
-
+let movetoNext = document.querySelectorAll('.questionOne')
+let movetoNext2 = document.querySelectorAll('.questionTwo')
+let movetoNext3 = document.querySelectorAll('.questionThree')
+let movetoNext4 = document.querySelectorAll('.questionFour')
+let movetoNext5 = document.querySelectorAll('.questionFive')
+let movetoNextScore = document.querySelectorAll('.scoreboard')
 
 startButton.addEventListener("click", startQuiz);
 
@@ -34,20 +39,30 @@ function startQuiz(){
      correct.forEach(correct=>{
         correct.addEventListener("click", ()=>correct.style.backgroundColor="green");
     })
-
+  
+       
+            movetoNext.forEach(movetoNext=>{
+                movetoNext.addEventListener("click", function(){setTimeout(questionTwo,1000);}) 
+        })
     }
+    
 
 function questionTwo(){
     contTwo.style.display="block";
     contStart.style.display="none";
     contOne.style.display ="none";
-   
+    movetoNext2.forEach(movetoNext2=>{
+    movetoNext2.addEventListener("click", function(){setTimeout(questionThree,1000);}) 
+})
 }
 function questionThree(){
     contTwo.style.display="none";
     contStart.style.display="none";
     contOne.style.display ="none";
     contThree.style.display = "block";
+    movetoNext3.forEach(movetoNext3=>{
+        movetoNext3.addEventListener("click", function(){setTimeout(questionFour,1000);}) 
+})
 }
 function questionFour(){
     contTwo.style.display="none";
@@ -55,6 +70,9 @@ function questionFour(){
     contOne.style.display ="none";
     contThree.style.display = "none";
     contFour.style.display="block";
+    movetoNext4.forEach(movetoNext4=>{
+        movetoNext4.addEventListener("click", function(){setTimeout(questionFive,1000);}) 
+})
 }
 function questionFive(){
     contTwo.style.display="none";
@@ -63,6 +81,9 @@ function questionFive(){
     contThree.style.display = "none";
     contFour.style.display="none";
     contFive.style.display ="block";
+    movetoNext5.forEach(movetoNext5=>{
+        movetoNext5.addEventListener("click", function(){setTimeout(scoreResults,1000);}) 
+})
 }
 function scoreResults(){
     contTwo.style.display="none";
