@@ -18,18 +18,50 @@ let movetoNext3 = document.querySelectorAll('.questionThree')
 let movetoNext4 = document.querySelectorAll('.questionFour')
 let movetoNext5 = document.querySelectorAll('.questionFive')
 let movetoNextScore = document.querySelectorAll('.scoreboard')
+let clearTime = document.querySelectorAll(".questionFive")
 
 startButton.addEventListener("click", startQuiz);
+startButton.addEventListener("click", scoreTimer);
 
 
 
 function startQuiz(){
     contOne.style.display="block";
     contStart.style.display="none";
- 
+    
     correctAnswer()
    
 }
+
+function scoreTimer (){
+     let sec= 60;
+     let timer;
+    function startTimer(){
+       
+        timer=setInterval(function(){
+            document.querySelector("#timer").innerHTML=sec;
+            sec--;
+            if (sec===0){
+                clearInterval(timer);
+                document.querySelector("#timer").innerHTML= sec + " Out of time"
+            }
+        },1000);
+    }
+    incorrect.forEach(incorrect =>{
+        incorrect.addEventListener("click", ()=>{
+            sec-=10;
+            document.querySelector("#timer").innerHTML=sec;
+        })
+        
+    })
+    
+    clearTime.forEach(clearTime=>{
+        clearTime.addEventListener('click', ()=>{clearInterval(timer)} )
+    })
+     startTimer();
+};  
+
+
 
     function correctAnswer(){
 
@@ -44,7 +76,10 @@ function startQuiz(){
             movetoNext.forEach(movetoNext=>{
                 movetoNext.addEventListener("click", function(){setTimeout(questionTwo,1000);}) 
         })
+
+       
     }
+    
     
 
 function questionTwo(){
@@ -84,6 +119,12 @@ function questionFive(){
     movetoNext5.forEach(movetoNext5=>{
         movetoNext5.addEventListener("click", function(){setTimeout(scoreResults,1000);}) 
 })
+
+clearTime.forEach(clearTime=>{
+    clearTime.addEventListener('click', function(){clearInterval(timer)} )
+})
+
+
 }
 function scoreResults(){
     contTwo.style.display="none";
@@ -94,3 +135,10 @@ function scoreResults(){
     contFive.style.display ="none";
     contScore.style.display ="block";
 }
+
+// function clearTimer(){
+//     clearTime.forEach(clearTime=>{
+//         clearTime.addEventListener('click', function(){clearInterval(timer)} )
+//     })
+     
+// }
