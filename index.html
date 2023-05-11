@@ -13,11 +13,12 @@
     <div class=containerMain>
         <br>
         <p class="time">Time: <span id="timer"></span></p>
+        <p class="highScore">High Score: <span id="highScore"></span</p><br>
         <div class="containerStart">
             <h1>Coding Quiz Challenge</h1>
             <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
                 answers will subtracts your time by ten seconds!</p>
-            <button class="btnStart"> Start Quiz</button>
+            <button class="btnStart" > Start Quiz</button>
         </div>
         <div class="containerOne">
             <h2 id="questionOne">question 1</h2>
@@ -57,16 +58,14 @@
         <div class="containerScore scoreboard" style="display:none;">
             <h2>All done!</h2>
             <form>
-                <label for="initials">Enter initials</label>
-                <input type="text" id="init" name="initials">
-                <input type="submit" value="Submit">
+                Enter Initials:
+                <input type="text" id="init" name="init" value="">
+                <input type="button" id="submitBtn" value="Submit">
             </form><br>
         </div>
         <div class="containerLast" style="display:none;">
             <h2> High Scores</h2>
-            <form>
-                <output name="x" for="initials" id="output">Hi</output>
-            </form>
+            <span id="showOutput"></span>
             <br>
             <button class="btn1" id="goBack">Go back</button>
             <button class="btn1" id="clearScore">Clear High Score</button>
